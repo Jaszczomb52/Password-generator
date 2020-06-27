@@ -1,0 +1,651 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.0": {
+      "Dapper/1.20.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "MySql.Data/6.9.12": {
+        "type": "package",
+        "compile": {
+          "lib/net40/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MySql.Data.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112",
+          "System.Data.SQLite.EF6": "1.0.112",
+          "System.Data.SQLite.Linq": "1.0.112"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.0/win": {
+      "Dapper/1.20.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "MySql.Data/6.9.12": {
+        "type": "package",
+        "compile": {
+          "lib/net40/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MySql.Data.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112",
+          "System.Data.SQLite.EF6": "1.0.112",
+          "System.Data.SQLite.Linq": "1.0.112"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.0/win-x64": {
+      "Dapper/1.20.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "MySql.Data/6.9.12": {
+        "type": "package",
+        "compile": {
+          "lib/net40/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MySql.Data.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112",
+          "System.Data.SQLite.EF6": "1.0.112",
+          "System.Data.SQLite.Linq": "1.0.112"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.0/win-x86": {
+      "Dapper/1.20.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.SqlServer.dll": {},
+          "lib/net40/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "MySql.Data/6.9.12": {
+        "type": "package",
+        "compile": {
+          "lib/net40/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net40/MySql.Data.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112",
+          "System.Data.SQLite.EF6": "1.0.112",
+          "System.Data.SQLite.Linq": "1.0.112"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dapper/1.20.0": {
+      "sha512": "2XDz98xZQLpVdYymkLaWmWtrhYB9qCgeAv3Jf/Nia/XE2d4H4aLwTx/ivELjmSX3txmEbT2ZuD+u11EynBCs3w==",
+      "type": "package",
+      "path": "dapper/1.20.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.1.20.0.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net35/Dapper.dll",
+        "lib/net35/Dapper.pdb",
+        "lib/net35/Dapper.xml",
+        "lib/net40/Dapper.dll",
+        "lib/net40/Dapper.pdb",
+        "lib/net40/Dapper.xml",
+        "lib/net45/Dapper.dll",
+        "lib/net45/Dapper.pdb",
+        "lib/net45/Dapper.xml"
+      ]
+    },
+    "EntityFramework/6.3.0": {
+      "sha512": "lEQ9h1aJMa1l/+mqAfUX3OmhPyBMMVyxOkKHYM9okrFXcFADz8UsTc3lOon7ahmKpwQ277aWypFFH2T9kKRsag==",
+      "type": "package",
+      "path": "entityframework/6.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/EntityFramework.props",
+        "build/EntityFramework.targets",
+        "build/Microsoft.Data.Entity.Build.Tasks.dll",
+        "buildTransitive/EntityFramework.props",
+        "buildTransitive/EntityFramework.targets",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "entityframework.6.3.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
+        "tools/EntityFramework6.PS2.psd1",
+        "tools/EntityFramework6.PS2.psm1",
+        "tools/EntityFramework6.psd1",
+        "tools/EntityFramework6.psm1",
+        "tools/about_EntityFramework6.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net40/any/ef6.exe",
+        "tools/net40/any/ef6.pdb",
+        "tools/net40/win-x86/ef6.exe",
+        "tools/net40/win-x86/ef6.pdb",
+        "tools/net45/any/ef6.exe",
+        "tools/net45/any/ef6.pdb",
+        "tools/net45/win-x86/ef6.exe",
+        "tools/net45/win-x86/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.dll",
+        "tools/netcoreapp3.0/any/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "MySql.Data/6.9.12": {
+      "sha512": "k2bi3iKRc8tBF1X5QWKuCzUUFbwRD6K5Kx4+jfsL3T5FDBQuqR/KELS0zWNHAuBToYiNaq+IIYMOyehywCvrxQ==",
+      "type": "package",
+      "path": "mysql.data/6.9.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES",
+        "Readme.txt",
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "lib/net40/MySql.Data.dll",
+        "lib/net45/MySql.Data.dll",
+        "mysql.data.6.9.12.nupkg.sha512",
+        "mysql.data.nuspec"
+      ]
+    },
+    "System.Data.SQLite/1.0.112": {
+      "sha512": "QsYUir0pcx+1DfhhbpCsIJN8nWmHTT4Z/s85q6Un5AbVEPCP6RA0EA9cgzwQ1l5wZ8SQ0jUq747FxPmwJs7ycQ==",
+      "type": "package",
+      "path": "system.data.sqlite/1.0.112",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.1.0.112.nupkg.sha512",
+        "system.data.sqlite.nuspec"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.112": {
+      "sha512": "3wA9v/K2ncZWsWfEBTiQppsi2014IJMXsZ1md3pk5bEXAJyuTthSrHF4bIWm5MG+C5g5XLhA2H7XfnSq1PXCeQ==",
+      "type": "package",
+      "path": "system.data.sqlite.core/1.0.112",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net20/System.Data.SQLite.Core.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/System.Data.SQLite.Core.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "build/net45/System.Data.SQLite.Core.targets",
+        "build/net45/x64/SQLite.Interop.dll",
+        "build/net45/x86/SQLite.Interop.dll",
+        "build/net451/System.Data.SQLite.Core.targets",
+        "build/net451/x64/SQLite.Interop.dll",
+        "build/net451/x86/SQLite.Interop.dll",
+        "build/net46/System.Data.SQLite.Core.targets",
+        "build/net46/x64/SQLite.Interop.dll",
+        "build/net46/x86/SQLite.Interop.dll",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.dll.config",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.dll.config",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.dll.config",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.dll.config",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.dll.config",
+        "lib/net46/System.Data.SQLite.xml",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.config",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll",
+        "system.data.sqlite.core.1.0.112.nupkg.sha512",
+        "system.data.sqlite.core.nuspec"
+      ]
+    },
+    "System.Data.SQLite.EF6/1.0.112": {
+      "sha512": "kdWoCeNbm5BEOw0qqUx60KZvv7jmAAlSTYZqImtU70jLpxDDfaZdB9HttjSqLZ2tED5vfEhDwukkHFG0tlXW1A==",
+      "type": "package",
+      "path": "system.data.sqlite.ef6/1.0.112",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/app.config.install.xdt",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.install.xdt",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.install.xdt",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.install.xdt",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.install.xdt",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.install.xdt",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.install.xdt",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.install.xdt",
+        "content/net46/web.config.transform",
+        "lib/net40/System.Data.SQLite.EF6.dll",
+        "lib/net45/System.Data.SQLite.EF6.dll",
+        "lib/net451/System.Data.SQLite.EF6.dll",
+        "lib/net46/System.Data.SQLite.EF6.dll",
+        "lib/netstandard2.1/System.Data.SQLite.EF6.dll",
+        "system.data.sqlite.ef6.1.0.112.nupkg.sha512",
+        "system.data.sqlite.ef6.nuspec",
+        "tools/net40/install.ps1",
+        "tools/net45/install.ps1",
+        "tools/net451/install.ps1",
+        "tools/net46/install.ps1"
+      ]
+    },
+    "System.Data.SQLite.Linq/1.0.112": {
+      "sha512": "mufled5QRZt9rHMqC+OCA3Xzkt6PMn4IkuZtQMgTqZfJMAyV2OaaUS+WOIR3UsEjuZhd3qu0BoYVnxJIhizXKQ==",
+      "type": "package",
+      "path": "system.data.sqlite.linq/1.0.112",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net20/app.config.transform",
+        "content/net20/web.config.transform",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.transform",
+        "lib/net20/System.Data.SQLite.Linq.dll",
+        "lib/net40/System.Data.SQLite.Linq.dll",
+        "lib/net45/System.Data.SQLite.Linq.dll",
+        "lib/net451/System.Data.SQLite.Linq.dll",
+        "lib/net46/System.Data.SQLite.Linq.dll",
+        "system.data.sqlite.linq.1.0.112.nupkg.sha512",
+        "system.data.sqlite.linq.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.0": [
+      "Dapper >= 1.20.0",
+      "MySql.Data >= 6.9.12",
+      "System.Data.SQLite >= 1.0.112",
+      "System.Data.SQLite.Core >= 1.0.112",
+      "System.Data.SQLite.EF6 >= 1.0.112",
+      "System.Data.SQLite.Linq >= 1.0.112"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kacper\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\projektyVisual\\losowanieHasla\\losowanieHasla\\losowanieHasla.csproj",
+      "projectName": "losowanieHasla",
+      "projectPath": "D:\\projektyVisual\\losowanieHasla\\losowanieHasla\\losowanieHasla.csproj",
+      "packagesPath": "C:\\Users\\Kacper\\.nuget\\packages\\",
+      "outputPath": "D:\\projektyVisual\\losowanieHasla\\losowanieHasla\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Kacper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net40"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net40": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net40": {
+        "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[1.20.0, )"
+          },
+          "MySql.Data": {
+            "target": "Package",
+            "version": "[6.9.12, )"
+          },
+          "System.Data.SQLite": {
+            "target": "Package",
+            "version": "[1.0.112, )"
+          },
+          "System.Data.SQLite.Core": {
+            "target": "Package",
+            "version": "[1.0.112, )"
+          },
+          "System.Data.SQLite.EF6": {
+            "target": "Package",
+            "version": "[1.0.112, )"
+          },
+          "System.Data.SQLite.Linq": {
+            "target": "Package",
+            "version": "[1.0.112, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
